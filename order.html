@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css">
+
+    <style>
+        .selected {
+            background-color: #002856; /* Tailwind blue-600 */
+            color: white;
+            border-color: #002856;
+        }
+
+        .bg-svg {
+            background-image: url('happy.jpg');
+            background-size:cover; /* Adjust as needed */
+            background-position: left; /* Center the SVG */
+            background-repeat: no-repeat; /* Prevent the SVG from repeating */
+            background-attachment: fixed; /* Keep the background in place during scroll */
+        }
+    </style>
+</head>
+<body class="xl:overflow-hidden">
+    <nav class="top-0 left-0 w-full bg-mainColor p-4 z-10">
+        <div class="container mx-auto flex justify-between items-center">
+            <!-- Logo -->
+            <div class="text-white text-lg font-bold">
+                <a href="index.html">QUICKBRUNCH</a>
+            </div>
+
+            <!-- Hamburger Menu -->
+            <div class="block lg:hidden">
+                <button class="text-white focus:outline-none" id="menu-btn">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Menu -->
+            <div class="hidden lg:flex space-x-4" id="menu">
+                <a href="#" class="text-white hover:text-gray-400">How it works?</a>
+                <a href="order.html" class="text-white hover:text-gray-400">Order Now</a>
+                <a href="#" class="text-white hover:text-gray-400">FAQ</a>
+                <a href="#" class="text-white hover:text-gray-400">Why nutrition is important?</a>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="lg:hidden hidden" id="mobile-menu">
+            <a href="#" class="block text-white hover:text-gray-400 px-4 py-2">How it works?</a>
+            <a href="order.html" class="block text-white hover:text-gray-400 px-4 py-2">Order Now</a>
+            <a href="#" class="block text-white hover:text-gray-400 px-4 py-2">FAQ</a>
+            <a href="#" class="block text-white hover:text-gray-400 px-4 py-2">Why nutrition is important?</a>
+        </div>
+    </nav>
+
+    
+    <div class="flex items-center justify-center min-h-screen bg-gray-100 bg-svg">
+        <div class="max-w-lg w-full bg-customWhite p-8 shadow-md rounded-lg">
+            <form>
+                <!-- Item 1 -->
+                <div class="flex items-center justify-between mb-4">
+                    <label class="text-mainColor font-medium">Pork Buritto</label>
+                    <div class="flex items-center">
+                        <button type="button" class="bg-gray-300 text-gray-800 px-3 py-1 rounded-l focus:outline-none" onclick="decrement('Pork Buritto')">-</button>
+                        <input type="number" id="Pork Buritto" name="Pork Buritto" value="0" min="0" class="w-12 text-center border-t border-b border-gray-300 focus:outline-none">
+                        <button type="button" class="bg-gray-300 text-gray-800 px-3 py-1 rounded-r focus:outline-none" onclick="increment('Pork Buritto')">+</button>
+                    </div>
+                </div>
+
+                <!-- Item 1 -->
+                <div class="flex items-center justify-between mb-4">
+                    <label class="text-mainColor font-medium">Chicken Buritto</label>
+                    <div class="flex items-center">
+                        <button type="button" class="bg-gray-300 text-gray-800 px-3 py-1 rounded-l focus:outline-none" onclick="decrement('Chicken Buritto')">-</button>
+                        <input type="number" id="Chicken Buritto" name="Chicken Buritto" value="0" min="0" class="w-12 text-center border-t border-b border-gray-300 focus:outline-none">
+                        <button type="button" class="bg-gray-300 text-gray-800 px-3 py-1 rounded-r focus:outline-none" onclick="increment('Chicken Buritto')">+</button>
+                    </div>
+                </div>
+
+                <label class="text-mainColor font-medium flex mb-4 text-mainColor">When will you pick it up?</label>
+                <div class="flex flex-wrap justify-center space-x-2 space-y-2 md:space-y-0 mb-4">
+                    <br>
+                    <!-- Time Option 1 -->
+                    <div class="flex items-center">
+                        <input type="radio" id="time-830" name="time" value="8:30" class="hidden">
+                        <label for="time-830" class="time cursor-pointer px-4 py-2 bg-gray-200 text-mainColor rounded-lg border border-gray-300 hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500" data-value="8:30">
+                            8:30
+                        </label>
+                    </div>
+            
+                    <!-- Time Option 2 -->
+                    <div class="flex items-center">
+                        <input type="radio" id="time-900" name="time" value="9:00" class="hidden">
+                        <label for="time-900" class="time cursor-pointer px-4 py-2 bg-gray-200 text-mainColor rounded-lg border border-gray-300 hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500" data-value="9:00">
+                            9:00
+                        </label>
+                    </div>
+            
+                    <!-- Time Option 3 -->
+                    <div class="flex items-center">
+                        <input type="radio" id="time-930" name="time" value="9:30" class="hidden">
+                        <label for="time-930" class="time cursor-pointer px-4 py-2 bg-gray-200 text-mainColor rounded-lg border border-gray-300 hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500" data-value="9:30">
+                            9:30
+                        </label>
+                    </div>
+            
+                    <!-- Time Option 4 -->
+                    <div class="flex items-center">
+                        <input type="radio" id="time-1000" name="time" value="10:00" class="hidden">
+                        <label for="time-1000" class="time cursor-pointer px-4 py-2 bg-gray-200 text-mainColor rounded-lg border border-gray-300 hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500" data-value="10:00">
+                            10:00
+                        </label>
+                    </div>
+                </div>
+
+                <label class="text-mainColor font-medium flex mb-4 text-mainColor">Choose a pickup location?</label>
+                <div class="flex flex-wrap justify-center space-x-2 space-y-2 md:space-y-0 mb-4">
+                    <br>
+                    <!-- Pickup Option 1 -->
+                    <div class="flex items-center">
+                        <input type="radio" id="location-skapto-1" name="location-skapto" value="skapto1" class="hidden">
+                        <label for="location-skapto-1" class="place cursor-pointer px-4 py-2 bg-gray-200 text-mainColor rounded-lg border border-gray-300 hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500" data-value="skapto1">
+                            Skapto 1
+                        </label>
+                    </div>
+                    
+                    <!-- Pickup Option 1 -->
+                    <div class="flex items-center">
+                        <input type="radio" id="location-skapto-2" name="location-skapto" value="skapto2" class="hidden">
+                        <label for="location-skapto-2" class="place cursor-pointer px-4 py-2 bg-gray-200 text-mainColor rounded-lg border border-gray-300 hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500" data-value="skapto2">
+                            Skapto 2
+                        </label>
+                    </div>
+                    
+                    <!-- Pickup Option 1 -->
+                    <div class="flex items-center">
+                        <input type="radio" id="location-skapto-3" name="location-skapto" value="skapto3" class="hidden">
+                        <label for="location-skapto-3" class="place cursor-pointer px-4 py-2 bg-gray-200 text-mainColor rounded-lg border border-gray-300 hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500" data-value="skapto3">
+                            Skapto 3
+                        </label>
+                    </div>
+                </div>
+    
+                <!-- Message Field -->
+                <div class="mb-4">
+                    <label for="additional-intructions" class="block text-mainColor font-bold mb-2">Additional Instructions</label>
+                    <textarea id="additional-intructions" rows="4" class="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter any additional instructions"></textarea>
+                </div>
+    
+                <!-- Submit Button -->
+                <div>
+                    <button type="submit" class="w-full bg-mainColor text-white py-2 px-4 rounded hover:bg-mainColor focus:outline-none focus:ring-2 focus:ring-mainColor">Proceed to Payment</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    
+
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+
+<script>
+    function increment(id) {
+        const input = document.getElementById(id);
+        input.value = parseInt(input.value) + 1;
+    }
+
+    function decrement(id) {
+        const input = document.getElementById(id);
+        if (input.value > 0) {
+            input.value = parseInt(input.value) - 1;
+        }
+    }
+</script>
+<script>
+    document.querySelectorAll('label.time').forEach(label => {
+        label.addEventListener('click', function () {
+            // Remove 'selected' class from all labels
+            document.querySelectorAll('label.time').forEach(lbl => lbl.classList.remove('selected'));
+
+            // Add 'selected' class to the clicked label
+            this.classList.add('selected');
+
+            // Check the associated radio button
+            const radioButton = document.getElementById(this.htmlFor);
+            radioButton.checked = true;
+        });
+    });
+    
+    document.querySelectorAll('label.place').forEach(label => {
+        label.addEventListener('click', function () {
+            // Remove 'selected' class from all labels
+            document.querySelectorAll('label.place').forEach(lbl => lbl.classList.remove('selected'));
+
+            // Add 'selected' class to the clicked label
+            this.classList.add('selected');
+
+            // Check the associated radio button
+            const radioButton = document.getElementById(this.htmlFor);
+            radioButton.checked = true;
+        });
+    });
+</script>
+</body>
+</html>
