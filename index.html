@@ -93,7 +93,7 @@
           </div>
           
     </div>
-    <div class="flex flex-wrap gap-4 w-full justify-center p-8 bg-mainColor text-mainColor" id="how-it-works">
+    <div class="flex flex-wrap gap-4 w-full justify-center p-8 bg-mainColor text-mainColor mb-5" id="how-it-works">
         <div class="w-full text-5xl text-white text-center py-6 pb-10">
             <h1 class="block"><b>How does it work?</b></h1>
         </div>
@@ -154,8 +154,20 @@
         </div>
     </div>
       
+
+    <footer class="bg-mainColor text-center text-white flex flex-wrap p-10">
+        <div class="justify-center w-full">
+            <p>
+                &copy; <span id="current-year"></span> QUICKBRUNCH. All rights reserved.
+            </p>
+        </div>
+    </footer>
     
     
+    <script>
+        // JavaScript to update the year automatically
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
 
     <script>
         const menuBtn = document.getElementById('menu-btn');
