@@ -1051,6 +1051,10 @@ video {
     position: static;
   }
 
+  .md\:relative {
+    position: relative;
+  }
+
   .md\:flex {
     display: flex;
   }
