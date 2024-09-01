@@ -7,6 +7,12 @@
     <link rel="stylesheet" href="css/main.css">
 
     <style>
+        .very-rounded-br {
+            border-radius: 0 0 10rem 0;
+        }
+        .very-rounded-tl {
+            border-radius: 10rem 0 0 0;
+        }
         .selected {
             background-color: #002856; /* Tailwind blue-600 */
             color: white;
@@ -41,7 +47,7 @@
 
             <!-- Menu -->
             <div class="hidden lg:flex space-x-4" id="menu">
-                <a href="menu.html" class="text-white hover:text-gray-400">Menu</a>
+                <a href="#quickbrunch-menu" class="text-white hover:text-gray-400">Menu</a>
                 <a href="#how-it-works" class="text-white hover:text-gray-400">How it works?</a>
                 <a href="order.html" class="text-white hover:text-gray-400">Order Now</a>
                 <a href="#" class="text-white hover:text-gray-400">FAQ</a>
@@ -51,7 +57,7 @@
 
         <!-- Mobile Menu -->
         <div class="w-full bg-mainColor lg:hidden hidden z-20" id="mobile-menu">
-            <a href="menu.html" class="block text-white hover:text-gray-400 px-4 py-2">Menu</a>
+            <a href="#quickbrunch-menu" class="block text-white hover:text-gray-400 px-4 py-2">Menu</a>
             <a href="#how-it-works" class="block text-white hover:text-gray-400 px-4 py-2">How it works?</a>
             <a href="order.html" class="block text-white hover:text-gray-400 px-4 py-2">Order Now</a>
             <a href="#" class="block text-white hover:text-gray-400 px-4 py-2">FAQ</a>
@@ -60,9 +66,9 @@
     </nav>
 
     
-    <div class="max-h-full flex">
+    <div class="max-h-full flex pt-10 md:pt-0">
         <!-- 40% width section, hidden on mobile -->
-        <div class="w-2/5 hidden md:flex bg-gray-200 items-center justify-center">
+        <div class="w-2/5 hidden md:flex bg-gray-200 items-center justify-center rounded-custom-br">
           <!-- Content for the 40% section -->
            <div class="py-12">
                 <img src="orderscreen.PNG" alt="orderscreen" class="max-h-screen">
@@ -70,101 +76,134 @@
         </div>
         
         <!-- 60% width section, full width on mobile -->
-        <div class="h-screen md:w-3/5 flex items-center justify-center">
+        <div class="h-screen w-full lg:w-3/5 flex items-center justify-center">
             <div class="max-w-3xl p-6">
               <!-- Headings -->
-              <h1 class="text-3xl md:text-5xl font-semibold mb-4 text-mainColor">Plan your breakfast <b>today</b>.</h1>
-              <h1 class="text-3xl md:text-5xl font-semibold mb-4 text-mainColor">Pickup <b>at your</b> Skapto</h1>
-              <h1 class="text-3xl md:text-5xl font-semibold mb-4 text-mainColor"><b>at a chosen</b> time tomorrow.</h1>
+              <h1 class="text-4xl md:text-5xl font-semibold mb-4 text-mainColor">Plan your breakfast <b>tonight</b>.</h1>
+              <h1 class="text-4xl md:text-5xl font-semibold mb-4 text-mainColor">Pickup <b>at your</b> Skapto</h1>
+              <h1 class="text-4xl md:text-5xl font-semibold mb-5 text-mainColor"><b>at a chosen</b> time tomorrow.</h1>
+              <h1 class="font-bold p-3 mb-5 text-3xl bg-mainColor text-center text-white rounded-md hover:bg-mainColor focus:outline-none focus:ring-2 focus:ring-mainColor w-full">
+                COMING TO AUBG SOON
+              </h1>
           
               <!-- Paragraph -->
-              <p class="text-md text-gray-600 mb-6 text-mainColor">
-                Do not go to your first lecture hungry! Plan your next breakfast today, pick it up at your dorm at convenient time tomorrow. Dive into the previously tedious lecture with proper nutrition.
+              <p class="text-md mb-6 text-mainColor">
+                We will prepare your most important meal just in time for your first lesson!<br>Pick it up at your dorm at convenient time tomorrow.<br>Dive into the previously tedious lecture with proper nutrition.
               </p>
+
+
           
               <!-- Email Form -->
               <form class="flex flex-col sm:flex-row gap-3 justify-center">
-                <input type="email" placeholder="Enter your email" class="flex-1 p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-mainColor text-mainColor" />
+                <input type="email" placeholder="As an early bruncher you will get benefits after we launch" class="flex-1 p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-mainColor text-mainColor" />
                 <button type="submit" class="p-3 bg-mainColor text-white rounded-md hover:bg-mainColor focus:outline-none focus:ring-2 focus:ring-mainColor">
-                  PLAN NOW
+                  BECOME AN<br>EARLY BRUNCHER
                 </button>
               </form>
             </div>
           </div>
           
     </div>
-    <div class="flex flex-wrap gap-4 w-full justify-center p-8 bg-mainColor text-mainColor" id="how-it-works">
+    <div class="p-10" id="quickbrunch-menu">
+        <div class="flex flex-wrap w-full bg-white text-mainColor justify-center mt-0 mb-10 md:mt-10 xl:rounded-full xl:overflow-hidden xl:border xl:border-mainColor">
+            <div class="w-1/2 lg:w-1/4 bg-white shadow-md relative">
+                <img src="chicken.jpg" alt="Description of the image" class="w-full object-cover">
+                <div class="p-4 xl:absolute xl:bottom-10 xl:right-10 bg-customWhiteBrighter xl:ml-10 xl:border xl:border-mainColor">
+                    <h3 class="text-3xl font-semibold mb-2">Chicken Burrito</h3>
+                    <p class="text-gray-700 text-sm">
+                        Tastes amazing with an espresso    
+                    </p>
+                    <button type="button" class="mt-3 p-3 bg-mainColor text-white rounded-md hover:bg-mainColor focus:outline-none focus:ring-2 focus:ring-mainColor">
+                        13.50 lv
+                    </button>
+                </div>
+            </div>
+            
+            <div class="w-1/2 lg:w-1/4 bg-white shadow-md relative">
+                <img src="beef.jpg" alt="Description of the image" class="w-full object-cover">
+                <div class="p-4 xl:absolute xl:bottom-10 xl:right-10 bg-customWhiteBrighter xl:ml-10 xl:border xl:border-mainColor">
+                    <h3 class="text-3xl font-semibold mb-2">Beef Burrito</h3>
+                    <p class="text-gray-700 text-sm">
+                        Tastes amazing with macha
+                    </p>
+                    <button type="button" class="mt-3 p-3 bg-mainColor text-white rounded-md hover:bg-mainColor focus:outline-none focus:ring-2 focus:ring-mainColor">
+                        16.50 lv
+                    </button>
+                </div>
+            </div>
+            
+            <div class="w-1/2 lg:w-1/4 bg-white shadow-md relative">
+                <img src="pork.jpg" alt="Description of the image" class="w-full object-cover">
+                <div class="p-4 xl:absolute xl:bottom-10 bg-customWhiteBrighter xl:ml-10 xl:border xl:border-mainColor">
+                    <h3 class="text-3xl font-semibold mb-2">Pork Burrito</h3>
+                    <p class="text-gray-700 text-sm">
+                        Tastes amazing with ayran    
+                    </p>
+                    <button type="button" class="mt-3 p-3 bg-mainColor text-white rounded-md hover:bg-mainColor focus:outline-none focus:ring-2 focus:ring-mainColor">
+                        11.50 lv
+                    </button>
+                </div>
+            </div>
+            
+            <div class="w-1/2 lg:w-1/4 bg-white shadow-md relative">
+                <img src="burger.jpg" alt="Description of the image" class="w-full object-cover">
+                <div class="p-4 xl:absolute xl:bottom-10 bg-customWhiteBrighter xl:ml-10 xl:border xl:border-mainColor">
+                    <h3 class="text-3xl font-semibold mb-2">Amazing burger</h3>
+                    <p class="text-gray-700 text-sm">
+                        Tastes amazing with an espresso    
+                    </p>
+                    <button type="button" class="mt-3 p-3 bg-mainColor text-white rounded-md hover:bg-mainColor focus:outline-none focus:ring-2 focus:ring-mainColor">
+                        9.99 lv
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="flex flex-wrap gap-4 w-full justify-center py-8 bg-mainColor text-mainColor lg:rounded-custom-tl" id="how-it-works">
         <div class="w-full text-5xl text-white text-center py-6 pb-10">
-            <h1 class="block"><b>How does it work?</b></h1>
+            <h1 class="block"><b>Easy as 1, 2, 3....</b></h1>
         </div>
         <!-- Card -->
-        <div class="sm:max-w-xs bg-white rounded-lg shadow-md">
-            <img src="step1.jpg" alt="Description of the image" class="w-full p-12 object-cover">
-            <div class="p-4">
+        <div class="w-full lg:w-1/5 bg-white lg:rounded-lg shadow-md">
+            <img src="step1.jpg" alt="Description of the image" class="hidden w-full lg:block lg:w-auto p-12 object-cover">
+            <div class="p-4 flex flex-wrap text-center justify-center lg:text-left lg:justify-between">
                 <div class="bg-mainColor text-white text-lg font-bold rounded-full w-8 h-8 flex items-center justify-center mb-2">1</div>
-                <h3 class="text-3xl font-semibold mb-2">Check your schedule for tomorrow</h3>
-                <p class="text-gray-700 text-sm">
-                    Review your calendar the night before to ensure you are prepared for the day's events. This allows you to allocate time efficiently and avoid last-minute rushes.
-                </p>
-                <button type="button" class="mt-3 p-3 bg-mainColor text-white rounded-md hover:bg-mainColor focus:outline-none focus:ring-2 focus:ring-mainColor">
-                    TRY NOW
-                </button>
+                
+                <h3 class="text-3xl font-semibold mb-2 w-full">Check your schedule for tomorrow</h3>
+                <a href="#subscribe">
+                    <button type="button" class="hidden lg:block mt-3 p-3 bg-mainColor text-white rounded-md hover:bg-mainColor focus:outline-none focus:ring-2 focus:ring-mainColor">
+                        TRY NOW
+                    </button>
+                </a>
             </div>
         </div>
         <!-- Card -->
-        <div class="sm:max-w-xs bg-white rounded-lg shadow-md">
-            <img src="step2.jpg" alt="Description of the image" class="w-full p-12 object-cover">
-            <div class="p-4">
+        <div class="w-full lg:w-1/5 bg-white lg:rounded-lg shadow-md">
+            <img src="step4.jpg" alt="Description of the image" class="hidden w-full lg:block lg:w-auto p-12 object-cover">
+            <div class="p-4 flex flex-wrap text-center justify-center lg:text-left lg:justify-between">
                 <div class="bg-mainColor text-white text-lg font-bold rounded-full w-8 h-8 flex items-center justify-center mb-2">2</div>
-                <h2 class="text-3xl font-semibold mb-2">Your first lecture is at 9:00</h2>
-                <p class="text-gray-700 text-sm">
-                    Note the start time of your first lecture to plan your morning accordingly. This ensures that you arrive on time, ready to engage in the session.
-                </p>
-                <button type="button" class="mt-3 p-3 bg-mainColor text-white rounded-md hover:bg-mainColor focus:outline-none focus:ring-2 focus:ring-mainColor">
-                    TRY NOW
-                </button>
+                
+                <h3 class="text-3xl font-semibold mb-2 w-full">Preorder<br class="hidden lg:block"/> tonight</h3>
+                <a href="#subscribe">
+                    <button type="button" class="hidden lg:block mt-3 p-3 bg-mainColor text-white rounded-md hover:bg-mainColor focus:outline-none focus:ring-2 focus:ring-mainColor">
+                        TRY NOW
+                    </button>
+                </a>
             </div>
         </div>
         <!-- Card -->
-        <div class="sm:max-w-xs bg-white rounded-lg shadow-md">
-            <img src="step4.jpg" alt="Description of the image" class="w-full p-12 object-cover">
-            <div class="p-4">
+        <div class="w-full lg:w-1/5 bg-white lg:rounded-lg shadow-md">
+            <img src="step5.jpg" alt="Description of the image" class="hidden w-full lg:block lg:w-auto p-12 object-cover">
+            <div class="p-4 flex flex-wrap text-center justify-center lg:text-left lg:justify-between">
                 <div class="bg-mainColor text-white text-lg font-bold rounded-full w-8 h-8 flex items-center justify-center mb-2">3</div>
-                <h2 class="text-3xl font-semibold mb-2">Preorder</br>tonight</h2>
-                <p class="text-gray-700 text-sm">
-                    Place your breakfast order the night before to streamline your morning routine. Preordering ensures availability and saves time in the morning.
-                </p>    
-                <button type="button" class="mt-3 p-3 bg-mainColor text-white rounded-md hover:bg-mainColor focus:outline-none focus:ring-2 focus:ring-mainColor">
-                    TRY NOW
-                </button>
-            </div>
-        </div>
-        <!-- Card -->
-        <div class="sm:max-w-xs bg-white rounded-lg shadow-md">
-            <img src="step5.jpg" alt="Description of the image" class="w-full p-12 object-cover">
-            <div class="p-4">
-                <div class="bg-mainColor text-white text-lg font-bold rounded-full w-8 h-8 flex items-center justify-center mb-2">4</div>
-                <h2 class="text-3xl font-semibold mb-2">Pick up in 15 seconds @ 8:30 @ ur skapto</h2>
-                <p class="text-gray-700 text-sm">
-                    Come down in front of your Skapto at your chosen time. The quick pickup process allows you to grab your meal and continue to your lecture without delay.
-                </p>
-                <button type="button" class="mt-3 p-3 bg-mainColor text-white rounded-md hover:bg-mainColor focus:outline-none focus:ring-2 focus:ring-mainColor">
-                    TRY NOW
-                </button>
-            </div>
-        </div>
-        <!-- Card -->
-        <div class="sm:max-w-xs bg-white rounded-lg shadow-md">
-            <img src="step6.jpg" alt="Description of the image" class="w-full p-12 object-cover">
-            <div class="p-4">
-                <div class="bg-mainColor text-white text-lg font-bold rounded-full w-8 h-8 flex items-center justify-center mb-2">5</div>
-                <h2 class="text-3xl font-semibold mb-2">Dive into learning properly nutritioned</h2>
-                <p class="text-gray-700 text-sm">
-                    With a healthy breakfast in hand, head to your first lecture feeling energized and focused. Proper nutrition enhances your ability to concentrate and participate actively.
-                </p>
-                <button type="button" class="mt-3 p-3 bg-mainColor text-white rounded-md hover:bg-mainColor focus:outline-none focus:ring-2 focus:ring-mainColor">
-                    TRY NOW
-                </button>
+                
+                <h3 class="text-3xl font-semibold mb-2 w-full">Pickup your meal @ Skapto of your choice</h3>
+                <a href="#subscribe">
+                    <button type="button" class="hidden lg:block mt-3 p-3 bg-mainColor text-white rounded-md hover:bg-mainColor focus:outline-none focus:ring-2 focus:ring-mainColor">
+                        TRY NOW
+                    </button>
+                </a>
             </div>
         </div>
     </div>
