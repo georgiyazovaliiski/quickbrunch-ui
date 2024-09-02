@@ -23,17 +23,18 @@
     </style>
 </head>
 <body class="xl:overflow-x-hidden">
-    <nav class="fixed md:relative top-0 left-0 w-full bg-mainColor p-4 z-10">
+    <nav class="fixed md:relative top-0 left-0 w-full bg-white text-mainColor p-10 px-0 z-10 border border-b-1">
         <div class="container mx-auto flex justify-between items-center">
             <!-- Logo -->
-            <div class="text-white text-lg font-bold">
+            <div class="flex flex-wrap text-3xl gap-4 font-bold">
+                <img src="logo.png" class="h-8" alt="">
                 <a href="index.html">QUICKBRUNCH</a>
             </div>
 
             <!-- Hamburger Menu -->
             <div class="block lg:hidden flex flex-wrap">
-                <a href="#how-it-works" class="text-white hover:text-gray-400 mr-3">How does it work?</a>
-                <button class="text-white focus:outline-none" id="menu-btn">
+                <a href="#how-it-works" class="hover:text-gray-400 mr-3">How does it work?</a>
+                <button class="focus:outline-none" id="menu-btn">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
                     </svg>
@@ -42,21 +43,21 @@
 
             <!-- Menu -->
             <div class="hidden lg:flex space-x-4" id="menu">
-                <a href="index.html#quickbrunch-menu" class="text-white hover:text-gray-400">Menu</a>
-                <a href="index.html#how-it-works" class="text-white hover:text-gray-400">How it works?</a>
-                <a href="order.html" class="text-white hover:text-gray-400">Order Now</a>
-                <a href="#" class="text-white hover:text-gray-400">FAQ</a>
-                <a href="#" class="text-white hover:text-gray-400">Why nutrition is important?</a>
+                <a href="#quickbrunch-menu" class="hover:text-mainColor">Menu</a>
+                <a href="#how-it-works" class="hover:text-mainColor">How it works?</a>
+                <a href="order.html" class="hover:text-mainColor">Order Now</a>
+                <a href="#" class="hover:text-mainColor">FAQ</a>
+                <a href="#" class="hover:text-mainColor">Why nutrition is important?</a>
             </div>
         </div>
 
         <!-- Mobile Menu -->
-        <div class="w-full bg-mainColor lg:hidden hidden z-20" id="mobile-menu">
-            <a href="index.html#quickbrunch-menu" class="block text-white hover:text-gray-400 px-4 py-2">Menu</a>
-            <a href="index.html#how-it-works" class="block text-white hover:text-gray-400 px-4 py-2">How it works?</a>
-            <a href="order.html" class="block text-white hover:text-gray-400 px-4 py-2">Order Now</a>
-            <a href="#" class="block text-white hover:text-gray-400 px-4 py-2">FAQ</a>
-            <a href="#" class="block text-white hover:text-gray-400 px-4 py-2">Why nutrition is important?</a>
+        <div class="w-full lg:hidden hidden z-20 mt-10" id="mobile-menu">
+            <a href="#quickbrunch-menu" class="block hover:text-mainColor px-4 py-2">Menu</a>
+            <a href="#how-it-works" class="block hover:text-mainColor px-4 py-2">How it works?</a>
+            <a href="order.html" class="block hover:text-mainColor px-4 py-2">Order Now</a>
+            <a href="#" class="block hover:text-mainColor px-4 py-2">FAQ</a>
+            <a href="#" class="block hover:text-mainColor px-4 py-2">Why nutrition is important?</a>
         </div>
     </nav>
 
@@ -64,23 +65,76 @@
     <div class="pt-20 pb-10 xl:py-0 flex items-center justify-center min-h-screen bg-gray-100 bg-svg">
         <div class="max-w-lg w-full bg-customWhite p-8 shadow-md rounded-lg">
             <form>
-                <!-- Item 1 -->
-                <div class="flex items-center justify-between mb-4">
-                    <label class="text-mainColor font-medium">Pork Buritto</label>
-                    <div class="flex items-center">
-                        <button type="button" class="bg-gray-300 text-gray-800 px-3 py-1 rounded-l focus:outline-none" onclick="decrement('Pork Buritto')">-</button>
-                        <input type="number" id="Pork Buritto" name="Pork Buritto" value="0" min="0" class="w-12 text-center border-t border-b border-gray-300 focus:outline-none">
-                        <button type="button" class="bg-gray-300 text-gray-800 px-3 py-1 rounded-r focus:outline-none" onclick="increment('Pork Buritto')">+</button>
+                <div class="flex flex-wrap text-center">
+                    <div class="bg-mainColor text-white w-1/2 p-5">
+                        Chicken Burrito
+                    </div>
+                    <div class="bg-mainColor text-white w-1/2 p-5">
+                        Beef Burrito
+                    </div>
+                    <div class="bg-mainColor text-white w-1/2 p-5">
+                        Pork Burrito
+                    </div>
+                    <div class="bg-mainColor text-white w-1/2 p-5">
+                        Amazing Burger
                     </div>
                 </div>
-
-                <!-- Item 1 -->
-                <div class="flex items-center justify-between mb-4">
-                    <label class="text-mainColor font-medium">Chicken Buritto</label>
-                    <div class="flex items-center">
-                        <button type="button" class="bg-gray-300 text-gray-800 px-3 py-1 rounded-l focus:outline-none" onclick="decrement('Chicken Buritto')">-</button>
-                        <input type="number" id="Chicken Buritto" name="Chicken Buritto" value="0" min="0" class="w-12 text-center border-t border-b border-gray-300 focus:outline-none">
-                        <button type="button" class="bg-gray-300 text-gray-800 px-3 py-1 rounded-r focus:outline-none" onclick="increment('Chicken Buritto')">+</button>
+                <br>
+                <div class="w-full mb-5">
+                    <div class="flex flex-row justify-center text-white mb-2">
+                        <div class="w-2/6 p-5 bg-mainColor text-center">
+                            <h4 class="text-center text-sm">Chicken Burrito</h4>
+                        </div>
+                        <div class="w-4/6 p-5 text-center text-mainColor bg-white">
+                            <h4 class="text-center text-sm">add instructions</h4>
+                        </div>
+                        <div class="w-1/6 p-5 text-center bg-brightRed">
+                            <h4 class="text-center text-sm">X</h4>
+                        </div>
+                    </div>
+                    <div class="flex flex-row justify-center text-white mb-2">
+                        <div class="w-2/6 p-5 bg-mainColor text-center">
+                            <h4 class="text-center text-sm">Chicken Burrito</h4>
+                        </div>
+                        <div class="w-4/6 p-5 text-center text-mainColor bg-white">
+                            <h4 class="text-center text-sm">add instructions</h4>
+                        </div>
+                        <div class="w-1/6 p-5 text-center bg-brightRed">
+                            <h4 class="text-center text-sm">X</h4>
+                        </div>
+                    </div>
+                    <div class="flex flex-row justify-center text-white mb-2">
+                        <div class="w-2/6 p-5 bg-mainColor text-center">
+                            <h4 class="text-center text-sm">Chicken Burrito</h4>
+                        </div>
+                        <div class="w-4/6 p-5 text-center text-mainColor bg-white">
+                            <h4 class="text-center text-sm">add instructions</h4>
+                        </div>
+                        <div class="w-1/6 p-5 text-center bg-brightRed">
+                            <h4 class="text-center text-sm">X</h4>
+                        </div>
+                    </div>
+                    <div class="flex flex-row justify-center text-white mb-2">
+                        <div class="w-2/6 p-5 bg-mainColor text-center">
+                            <h4 class="text-center text-sm">Chicken Burrito</h4>
+                        </div>
+                        <div class="w-4/6 p-5 text-center text-mainColor bg-white">
+                            <h4 class="text-center text-sm">add instructions</h4>
+                        </div>
+                        <div class="w-1/6 p-5 text-center bg-brightRed">
+                            <h4 class="text-center text-sm">X</h4>
+                        </div>
+                    </div>
+                    <div class="flex flex-row justify-center text-white mb-2">
+                        <div class="w-2/6 p-5 bg-mainColor text-center">
+                            <h4 class="text-center text-sm">Chicken Burrito</h4>
+                        </div>
+                        <div class="w-4/6 p-5 text-center text-mainColor bg-white">
+                            <h4 class="text-center text-sm">add instructions</h4>
+                        </div>
+                        <div class="w-1/6 p-5 text-center bg-brightRed">
+                            <h4 class="text-center text-sm">X</h4>
+                        </div>
                     </div>
                 </div>
 
